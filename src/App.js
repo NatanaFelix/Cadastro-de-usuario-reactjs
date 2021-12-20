@@ -1,24 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import Logo from './components/templetes/Logo';
+import Nave from './components/templetes/Nave';
+import Main from './components/templetes/Main';
+import Footer from './components/templetes/Footer';
+
+import 'font-awesome/css/font-awesome.min.css'
+import 'react-bootstrap'
+import Home from './components/templetes/Home';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './Routes';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Logo />
+        <Nave />
+        <Routes />
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
